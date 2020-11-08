@@ -19,7 +19,7 @@ public class JsonReaderUtil {
       ToDo:API is given, This Rest API will give you a Json Array. It is parsed partially. Your task is to give the following output.
 
       output:
-
+conf
      "mrahman@gmail.com" "Matiur Rahman" "400k" "Finance"
      "mrahman@gmail.com" "Rohan Rahman" "100k" "Engineering"
      "kafil@gmail.com" "Kafil" "200k" "Backend End Team"
