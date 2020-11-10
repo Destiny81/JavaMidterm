@@ -9,5 +9,37 @@ public class Pattern {
          *
          */
 
+        int x = 0;
+        for (int i = 100; i >= 0; i--) {
+            x++;
+            if (x <= 10) {
+                System.out.print(i + " ");
+
+            } else {
+
+                for (i = 90; i >= 0; i -= 2) {
+                    if (x > 10 && x <= 20) {
+                        System.out.print(i + " ");
+                        x++;
+
+                    } else {
+                        for (i = 70; i >= 0; i -= 3) {
+                            if (x > 20 && x <= 30) {
+                                System.out.print(i + " ");
+                                x++;
+
+                            } else {
+                                for (i = 40; i >= 0; i -= 4) {
+                                    if (x > 0 && x <= 60) {
+                                        System.out.print(i + " ");
+                                        x++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
