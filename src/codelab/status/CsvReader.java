@@ -39,28 +39,59 @@ public class CsvReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        int exercise = 0;
         Collections.sort(roster);
         for (Trainee student : roster) {
             if (student.getNumberOfExercisesSolved() >= 500) {
                 System.out.print("You did pretty good-->                    ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                exercise = student.getNumberOfExercisesSolved();
+                System.out.println("number of exercise done " + exercise);
+
             } else if (student.getNumberOfExercisesSolved() >= 400 && student.getNumberOfExercisesSolved() < 500) {
                 System.out.print("You could do better-->                    ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                exercise = student.getNumberOfExercisesSolved();
+                System.out.println("number of exercise done " + exercise);
+
             } else if (student.getNumberOfExercisesSolved() >= 300 && student.getNumberOfExercisesSolved() < 400) {
                 System.out.print("You should have done more-->              ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                exercise = student.getNumberOfExercisesSolved();
+                System.out.println("number of exercise done " + exercise);
+
+
+
             } else if (student.getNumberOfExercisesSolved() >= 200 && student.getNumberOfExercisesSolved() < 300) {
                 System.out.print("You haven't done enough-->                 ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                exercise = student.getNumberOfExercisesSolved();
+                System.out.println("number of exercise done " + exercise);
+
+
             } else if (student.getNumberOfExercisesSolved() >= 100 && student.getNumberOfExercisesSolved() < 200) {
                 System.out.print("You did not take this exercise seriously-->   ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
-            } else if (student.getNumberOfExercisesSolved() < 100) {
-                System.out.print("You are in a bad shape !-->                           ");
-                System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+
+
+
+            } else
+                    if (student.getNumberOfExercisesSolved() < 100) {
+                        System.out.print("You are in a bad shape !-->                           ");
+                        System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                        exercise = exercise + student.getNumberOfExercisesSolved();
+                        System.out.println("number of exercise done " + exercise);
+
+
+
             }
         }
+
+        System.out.println("The total score is: "+ exercise);
+        int Student = 26;
+        double avg = exercise/ Student;
+        System.out.println("The average score of the class is: "+ avg);
+
 
     }
 

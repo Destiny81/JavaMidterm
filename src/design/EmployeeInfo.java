@@ -20,6 +20,7 @@ public class EmployeeInfo {
     /*
      * declare few static and final fields and some non-static fields
      */
+
     static String companyName;
 
     /*
